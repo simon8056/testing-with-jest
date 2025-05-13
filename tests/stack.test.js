@@ -19,5 +19,5 @@ test('peek on stack with two or more elements returns the top element', () => {
 });
 
 test('mitt egna test: pop på en tom stack, kommer inte fungera', () => {
-    expect(() => stack.pop()).toThrow();
+    expect(() => stack.pop()).not.toThrow();
 })

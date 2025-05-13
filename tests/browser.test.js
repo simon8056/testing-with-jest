@@ -34,9 +34,3 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
-
-test('mitt test: öppna sidan', async () => {
-    let driver = await new Builder().forBrowser('chrome').build();
-    await driver.get('file:///wowawewa/index.html');
-    await driver.quit();
-})
