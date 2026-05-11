@@ -9,9 +9,15 @@ window.onload = function () {
     var display = document.getElementById('top_of_stack');
 
     pop.addEventListener("click", function() {
-        var text = "Tog bort " + stack.pop();
-        alert(text);
-    });
+    var text = "Tog bort " + stack.pop();
+    alert(text);
+    var top = stack.peek();
+    if (top === undefined) {
+        display.innerHTML = "n/a";
+    } else {
+        display.innerHTML = top;
+    }
+});
 
     push.addEventListener("click", function() {
         var x = prompt("Vad ska vi lägga på stacken?");

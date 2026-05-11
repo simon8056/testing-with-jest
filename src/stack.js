@@ -5,6 +5,7 @@ let stack = [];
 // Lägger ett element överst i stacken
 exports.push = function (x) {
     stack.push(x);
+    return x;
 };
 
 // Returnerar det översta elementet i stacken och tar bort det
