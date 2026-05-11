@@ -16,3 +16,7 @@ exports.pop = function () {
 exports.peek = function () {
     return _.last(stack);
 }
+
+test('returns the value that was added', () => {
+    expect(stack.push("RB21")).toBe("RB21");
+});

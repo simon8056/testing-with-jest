@@ -34,3 +34,19 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+describe('Clicking "Poppa stacken"', () => {
+    it('should show n/a when the last value is removed', async () => {
+        let push = await driver.findElement(By.id('push'));
+        await push.click();
+        let prompt = await driver.switchTo().alert();
+        await prompt.sendKeys("Kaffe");
+        await prompt.accept();
+        let pop = await driver.findElement(By.id('pop'));
+        await pop.click();
+        let alert = await driver.switchTo().alert();
+        await alert.accept();
+        let stack = await driver.findElement(By.id('top_of_stack')).getText();
+        expect(stack).toEqual("n/a");
+    });
+});
